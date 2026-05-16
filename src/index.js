@@ -1,3 +1,6 @@
+import homeRoutes from "./routes/homeRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -100,6 +103,9 @@ app.use("/api/ai", aiRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/user-information", userInformationRoutes);
+app.use("/api/home", homeRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/payments", paymentRoutes);
 
 /**
  * @docs Swagger UI
